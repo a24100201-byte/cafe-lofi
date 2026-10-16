@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Lofi - Formulario de Pedido</title>
+    <!-- Asegúrate de enlazar la hoja de estilos que le da el diseño Lofi -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <h1>Café Lofi</h1>
+        <p>Formulario de pedido</p>
+    </header>
+
+    <main class="contenedor-principal">
+        <form class="card-formulario" id="pedidoForm" action="/pedido" method="POST">
+            
+            <span class="subtitulo-seccion">TU PAUSA, A TU MANERA</span>
+            <h2>Prepara tu pedido</h2>
+
+            <!-- SECCIÓN 1: Información del Cliente -->
+            <section class="seccion-form">
+                <h3><span class="numero-paso">1</span> Información del Cliente</h3>
+                
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Kylie Arlette" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+52 33 1234 5678">
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: Tu Pedido -->
+            <section class="seccion-form">
+                <h3><span class="numero-paso">2</span> Tu Pedido</h3>
+
+                <div class="fila-doble">
+                    <div class="grupo-campo">
+                        <label for="producto">Elige tu Café:</label>
+                        <select id="producto" name="producto" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Café Americano">Café Americano</option>
+                            <option value="Capuchino">Capuchino</option>
+                            <option value="Latte">Latte</option>
+                            <option value="Espresso">Espresso</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campo corto">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" name="cantidad" value="1" min="1" required>
+                    </div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Tamaño:</label>
+                    <div class="opciones-grid">
+                        <label class="opcion-card">
+                            <input type="radio" name="tamano" value="Chico (8oz)">
+                            <span>Chico (8oz)</span>
+                        </label>
+                        <label class="opcion-card">
+                            <input type="radio" name="tamano" value="Mediano (12oz)" checked>
+                            <span>Mediano (12oz)</span>
+                        </label>
+                        <label class="opcion-card">
+                            <input type="radio" name="tamano" value="Grande (16oz)">
+                            <span>Grande (16oz)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Extras:</label>
+                    <div class="opciones-lista">
+                        <label class="opcion-checkbox">
+                            <input type="checkbox" name="extras" value="Leche de Almendra + $15">
+                            <span>Leche de Almendra + $15</span>
+                        </label>
+                        <label class="opcion-checkbox">
+                            <input type="checkbox" name="extras" value="Jarabe de Vainilla + $10">
+                            <span>Jarabe de Vainilla + $10</span>
+                        </label>
+                        <label class="opcion-checkbox">
+                            <input type="checkbox" name="extras" value="Extra Shot + $15">
+                            <span>Extra Shot + $15</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: Detalles de Entrega -->
+            <section class="seccion-form">
+                <h3><span class="numero-paso">3</span> Detalles de Entrega</h3>
+
+                <div class="grupo-campo">
+                    <label for="direccion">Dirección de entrega:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle, Número y Colonia">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="observaciones">Notas especiales:</label>
+                    <textarea id="observaciones" name="observaciones" placeholder="Ej. Poco hielo, sin azúcar..."></textarea>
+                </div>
+            </section>
+
+            <!-- Botones -->
+            <div class="contenedor-botones">
+                <button type="reset" class="btn-secundario">Limpiar</button>
+                <button type="submit" class="btn-primario">Confirmar y Realizar Pedido &rarr;</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>

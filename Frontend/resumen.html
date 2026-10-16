@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Lofi - Resumen de Pedido</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resumen.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <h1>Café Lofi</h1>
+        <p>¡Gracias por tu pedido!</p>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="card-formulario">
+            <span class="subtitulo-seccion">CONFIRMACIÓN</span>
+            <h2>Resumen del Pedido</h2>
+
+            <section class="seccion-form">
+                <div class="grupo-campo">
+                    <label>Cliente:</label>
+                    <div class="opcion-card" id="res-nombre">Cargando...</div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Contacto:</label>
+                    <div class="opcion-card" id="res-contacto">Cargando...</div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Producto:</label>
+                    <div class="opcion-card" id="res-producto">Cargando...</div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Tamaño y Extras:</label>
+                    <div class="opcion-card" id="res-detalles">Cargando...</div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Dirección de Entrega:</label>
+                    <div class="opcion-card" id="res-direccion">Cargando...</div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Notas Especiales:</label>
+                    <div class="opcion-card" id="res-observaciones">Cargando...</div>
+                </div>
+            </section>
+
+            <div class="contenedor-botones">
+                <a href="/index.html" class="btn-primario" style="text-decoration: none; text-align: center;">Hacer otro pedido</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/resumen.js"></script>
+</body>
+</html>
